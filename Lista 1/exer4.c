@@ -6,7 +6,7 @@ int main(void)
 {
     float nota1, nota2, nota3, media;
 
-    printf("Informe a primeira nota:");
+    printf("Informe a primeira nota:  ");
     scanf("%f", &nota1);
     printf("Informe a terceira nota:");
     scanf("%f", &nota2);
