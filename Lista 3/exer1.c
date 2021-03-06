@@ -1,50 +1,22 @@
-/*  Ler um número double. Separar a parte inteira
-e a parte decimal desse número. Apresentar a parte
-decimal como um valor double e como um inteiro de
-três dígitos. Da parte inteira separar o número
-que representa unidade, dezena e centena e mostrar. */
+/* Fazer um programa que leia um valor double que representa o salário de uma pessoa.
+ Apresente separadamente os reais (parte inteira) e os centavos (parte decimal). */
 
-#include <stdio.h>
+ #include <stdio.h>
 
-int main(void)
-{
-    double num1, partDec;
-    int partInt, partDecInt, cent, dez, uni;
+ int main(void)
+ {
+     float salario, saldec;
+     int salint;
 
-    printf("INforme um numero: ");
-    scanf("%lf", &num1);
+     printf("Informe o seu salario: ");
+     scanf("%f", &salario);
 
-    printf("\nNumero inteiro: %lf", num1);
+     salint = (int)salario;
+     saldec = (salario - salint) * 100;
 
-    partInt = (int)num1;
-    printf("\nParte inteira: %d", partInt);
+     printf("\nSalario informado= R$%.2f", salario);
+     printf("\nReais=%d", salint);
+     printf("\nCentavos=%.0f", saldec);
 
-    partDec = num1 - partInt;
-    printf("\nParte decimal: %lf", partDec);
-
-    partDecInt = partDec * 1000;
-    printf("\nNumero decimal como inteiro: %d", partDecInt);
-
-    cent = partInt / 100;
-    printf("\nCentena: %d", cent);
-
-    dez = (partInt % 100) / 10;
-    printf("\nDezena: %d", dez);
-
-    uni = partInt % 10;
-    printf("\nUnidade: %d", uni);
-
-    return 0;
-
-
-
-
-
-
-
-
-
-
-
-
-}
+     return 0;
+ }
