@@ -14,7 +14,7 @@ Estabelecer uma condição para finalizar a entrada de dados do programa. Por exem
   #include <stdio.h>
 
   int main(void)
-  {s
+  {
       int idade=1, contBras=0, contestran=0, contBrasSC=0, somaBrasSC=0, primeiro=0, menor=0;
       char nas, sup;
       float media;
