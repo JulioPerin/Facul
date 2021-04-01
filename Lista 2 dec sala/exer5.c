@@ -9,8 +9,23 @@ int main(void)
     printf("Informe sua renda anual: ");
     scanf("%f", &anual);
 
-    if(anual < 10.000)
+    if(anual < 0)
     {
-
+        printf("\nValor invalido\n");
     }
+    else if(anual <= 10000)
+    {
+       printf("\nNao paga imposto de renda\n");
+    }
+
+    else if(anual > 10000 && anual < 25000)
+    {
+        printf("\nO valor a ser pagado eh de %.2f\n", anual * 0.1);
+    }
+
+    else if(anual > 25000)
+    {
+        printf("\nO valor a ser pagado eh de %.2f\n", anual * 0.25);
+    }
+    return 0;
 }
