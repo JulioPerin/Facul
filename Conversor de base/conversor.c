@@ -1,25 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <locale.h>
 
 int main()
 {
-   int num, binario[8], i;
+   int num, bin[8], aux;
 
-   printf("Digite o número decimal para a conversão: ", setlocale(LC_ALL,""));
+   printf("Digite o nÃºmero (base decimal) para ser convertido: ");
    scanf("%d", &num);
 
-   for (i = 7; i >= 0; i--)
+   for (aux = 7; aux >= 0; aux--)
    {
       if (num % 2 == 0)
-         binario[i] = 0;
+         bin[aux] = 0;
       else
-         binario[i] = 1;
+         bin[aux] = 1;
       num = num / 2;
    }
 
-   for (i = 0; i < 8; i++)
-       printf("%d", binario[i]);
+   for (aux = 0; aux < 8; aux++)
+       printf("%d", bin[aux]);
+
+   printf("\n");
 
    return 0;
 }
