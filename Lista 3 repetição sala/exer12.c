@@ -12,10 +12,10 @@ int main(void)
         cont=0;
 
     do
-         {
+    {
 
-         printf("Informe a quantidade de pares que deseja imprimir: ");
-         scanf("%d", &n);
+        printf("Informe a quantidade de pares que deseja imprimir: ");
+        scanf("%d", &n);
 
             if(n <= 0)
             {
@@ -42,8 +42,8 @@ int main(void)
         setbuf(stdin, NULL);
         scanf("%c", &opcao);
 
-        }
-     while(opcao == 's' || opcao == 'S');
+    }
+    while(opcao == 's' || opcao == 'S');
 
     return 0;
 }
