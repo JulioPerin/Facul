@@ -24,30 +24,72 @@ void soma(void)
     printf("Soma: %d\n", num1 + num2);
 }
 
-void subtracao(int num1, int num2)
+void subtracao(void)
 {
-    printf("Subtracao: %d\n", num1 - num2);
+    int n1, n2;
+
+    printf("Informe o primeiro numero: ");
+    scanf("%d", &n1);
+    printf("Informe o segundo numero: ");
+    scanf("%d", &n2);
+
+    printf("Subtracao: %d\n", n1 - n2);
 }
 
-int multiplicacao(int num1, int num2)
+void multiplicacao(void)
 {
-    return(num1 * num2);
+    int n1, n2;
+
+    printf("Informe o primeiro numero: ");
+    scanf("%d", &n1);
+    printf("Informe o segundo numero: ");
+    scanf("%d", &n2);
+    printf("Multiplicacao: %d\n", (n1 * n2));
 }
 
-float divisao(int num1, int num2)
+void divisao(void)
 {
-    return((float)num1/num2);
+    int n1, n2;
+
+    printf("Informe o primeiro numero: ");
+    scanf("%d", &n1);
+        do
+        {
+            printf("Informe o segundo numero: ");
+            scanf("%d", &n2);
+
+            if(n2<=0)
+            {
+                printf("Valor invalido\n");
+            }
+         }while(n2<=0);
+
+        printf("Divisao: %.2f\n",((float)n1 / n2));
 }
 
-int resto(int num1, int num2)
+void resto(void)
 {
-    return(num1%num2);
+    int n1, n2;
+
+     printf("Informe o primeiro numero: ");
+                scanf("%d", &n1);
+        do
+        {
+            printf("Informe o segundo numero: ");
+            scanf("%d", &n2);
+
+            if(n2<=0)
+            {
+                printf("Valor invalido\n");
+            }
+        }while(n2<=0);
+
+        printf("Resto: %d\n", (n1 % n2));
 }
 
 int main(void)
 {
     char escolha, opcao;
-    int n1, n2;
 
     do
     {
@@ -68,51 +110,23 @@ int main(void)
                 break;
             case 'S':
             case 's':
-                printf("Informe o primeiro numero: ");
-                scanf("%d", &n1);
-                printf("Informe o segundo numero: ");
-                scanf("%d", &n2);
-                subtracao(n1, n2);
+
+                subtracao();
                 break;
             case 'M':
             case 'm':
-                printf("Informe o primeiro numero: ");
-                scanf("%d", &n1);
-                printf("Informe o segundo numero: ");
-                scanf("%d", &n2);
-                printf("Multiplicacao: %d\n", multiplicacao(n1, n2));
+
+                multiplicacao();
                 break;
             case 'D':
             case 'd':
-                printf("Informe o primeiro numero: ");
-                scanf("%d", &n1);
-                do
-                {
-                    printf("Informe o segundo numero: ");
-                    scanf("%d", &n2);
 
-                    if(n2<=0)
-                    {
-                        printf("Valor invalido\n");
-                    }
-                }while(n2<=0);
-                printf("Divisao: %.2f\n", divisao(n1, n2));
+                divisao();
                 break;
             case 'R':
             case 'r':
-                printf("Informe o primeiro numero: ");
-                scanf("%d", &n1);
-                do
-                {
-                    printf("Informe o segundo numero: ");
-                    scanf("%d", &n2);
 
-                    if(n2<=0)
-                    {
-                        printf("Valor invalido\n");
-                    }
-                }while(n2<=0);
-                printf("Resto: %d\n", resto(n1, n2));
+                resto();
                 break;
             default:
                 printf("Opcao invalida\n");
